@@ -12,7 +12,7 @@ app.use("/blog", blogRoutes);
 
 app.use((err, req, res, next) => {
     if (err) {
-        return res.status(500).send("somthing wrong");
+        return res.status(500).send(err);
     }
 });
 app.listen(application.port, () => {
